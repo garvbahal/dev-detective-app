@@ -111,7 +111,9 @@ function renderData(data) {
 
   let dateElements = data?.created_at.split("T").shift().split("-");
 
-  joinDate.innerText = `Joined ${dateElements[2]} ${months[dateElements[1]-1]} ${dateElements[0]}`;
+  joinDate.innerText = `Joined ${dateElements[2]} ${
+    months[dateElements[1] - 1]
+  } ${dateElements[0]}`;
   gitLink.href = data?.html_url;
   gitLink.innerText = `@${currentUser}`;
   aboutContainer.innerText =
