@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevDetectiveApp | Garv</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
   </head>
   <body>
@@ -18,26 +19,36 @@
       <div class="heading-container">
         <h1>DevDetective</h1>
         <button class="dark-mode-btn">
-          <p></p>
-          <img src="" />
+          <p data-darkModePara></p>
+          <img data-darkModeImg src="" />
         </button>
       </div>
 
-      <div class="search-container">
-        <input type="text" placeholder="Enter a GitHub username..." />
+      <form class="search-container">
+        <input
+          type="text"
+          id="username"
+          class="input-container"
+          name="username"
+          data-formInput
+          placeholder="Enter a GitHub username..."
+        />
+
+        <p class="error-handling-form">no search results</p>
 
         <img src="assets/images/search-icon.svg" alt="" />
 
-        <button class="search-btn">Search</button>
-      </div>
+        <button class="search-btn" type="submit">Search</button>
+      </form>
 
       <div class="content-container">
-        <img src="" data-userImage>
-
         <div class="name-details-container">
-          <h2 data-name></h2>
-          <p data-joinDate></p>
-          <a href="" data-gitLink></a>
+          <img src="" data-userImage />
+          <div class="profile-header-info">
+            <h2 data-name></h2>
+            <p data-joinDate></p>
+            <a href="" data-gitLink></a>
+          </div>
         </div>
 
         <div class="about-container" data-about></div>
@@ -57,23 +68,39 @@
         </div>
 
         <div class="other-info-container">
-          <div>
-            <img src="assets/images/location-icon.svg" alt="" />
+          <div class="location-container box">
+            <img
+              src="assets/images/location-icon.svg"
+              class="icon-images"
+              alt=""
+            />
             <p data-location></p>
           </div>
 
-          <div>
-            <img src="assets/images/website-icon.svg" alt="" />
+          <div class="website-container box">
+            <img
+              src="assets/images/website-icon.svg"
+              class="icon-images"
+              alt=""
+            />
             <a href="#" data-website></a>
           </div>
 
-          <div>
-            <img src="assets/images/twitter-icon.svg" alt="" />
+          <div class="twitter-container box">
+            <img
+              src="assets/images/twitter-icon.svg"
+              class="icon-images"
+              alt=""
+            />
             <a href="#" data-userTwitter></a>
           </div>
 
-          <div>
-            <img src="assets/images/company-icon.svg" alt="" />
+          <div class="company-container box">
+            <img
+              src="assets/images/company-icon.svg"
+              class="icon-images"
+              alt=""
+            />
             <p data-company></p>
           </div>
         </div>
